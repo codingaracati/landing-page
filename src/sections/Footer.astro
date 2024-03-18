@@ -1,0 +1,70 @@
+---
+import { FaInstagram, FaGithub, FaWhatsapp } from "react-icons/fa6";
+
+import Logo from "../assets/Logo";
+
+import Button from "../components/Button";
+
+const socials = [
+  {
+    Icon: FaWhatsapp,
+    name: "whatsapp",
+  },
+  {
+    Icon: FaInstagram,
+    name: "instagram",
+  },
+  {
+    Icon: FaGithub,
+    name: "github",
+  },
+];
+---
+
+<footer>
+  <div class="flex flex-col items-center bg-gray-100 p-8">
+    <h1 class="text-5xl text-primary font-semibold max-w-4xl text-center mb-8">
+      Faça parte agora mesmo da comunidade Coding Aracati
+    </h1>
+    <Button> Entrar na comunidade </Button>
+  </div>
+  <div class="flex justify-center bg-primary text-white py-16 px-36">
+    <div class="flex flex-col w-full max-w-7xl">
+      <div class="flex flex-row items-center mb-10">
+        <Logo size={64} color="#fff" />
+        <h1 class="text-white font-medium text-4xl ml-1">Coding Aracati</h1>
+      </div>
+      <span class="text-sm font-normal mb-2">
+        Copyright © 2024 Coding Aracati
+      </span>
+      <span class="text-sm font-normal mb-10">Todos os direitos reservados</span
+      >
+      <div class="flex gap-2">
+        {
+          socials.map(({ Icon, name }) => (
+            <div class="flex justify-center items-center w-8 h-8 bg-blue-950 rounded-full cursor-pointer">
+              <button id={name} type="button">
+                <Icon size={16} />
+              </button>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>
+<script is:inline>
+  const handleLink = (url) => {
+    window.open(url);
+  };
+
+  document.getElementById("whatsapp").addEventListener("click", () => {
+    handleLink("https://wa.me/5588999999999");
+  });
+  document.getElementById("instagram").addEventListener("click", () => {
+    handleLink("https://www.instagram.com/codingaracati/");
+  });
+  document.getElementById("github").addEventListener("click", () => {
+    handleLink("https://github.com/codingaracati");
+  });
+</script>
