@@ -1,0 +1,45 @@
+---
+import { FaCalendar, FaWrench, FaLaptop } from "react-icons/fa6";
+
+import ActivityCard from "../components/ActivityCard";
+
+const acvities = [
+  {
+    Icon: FaCalendar,
+    title: "MeetUp",
+    description:
+      "Um encontro presencial onde pessoas com interesses semelhantes se reúnem para compartilhar conhecimento, fazer networking e participar de discussões informais sobre um tópico específico.",
+  },
+  {
+    Icon: FaWrench,
+    title: "Workshop",
+    description:
+      "Uma sessão prática e interativa, geralmente conduzida por um especialista, onde os participantes têm a oportunidade de aprender novas habilidades, explorar ideias ou resolver problemas específicos por meio de atividades práticas e orientadas.",
+  },
+  {
+    Icon: FaLaptop,
+    title: "Hackathon",
+    description:
+      "Um evento de colaboração intensiva, geralmente realizado durante um período concentrado de tempo, onde programadores, designers e outros profissionais se reúnem para trabalhar em projetos de software, criar protótipos ou solucionar desafios, geralmente com um tema específico em mente.",
+  },
+];
+---
+
+<div class="py-10 px-36 flex flex-col items-center">
+  <h1 class="text-primary font-semibold text-4xl text-center mb-2">
+    Eventos e Atividades
+  </h1>
+  <h2 class="text-secondary text-base font-normal mb-7 max-w-3xl text-center">
+    Explore uma variedade de eventos e atividades emocionantes para todos os
+    interesses e níveis de habilidade. Desde encontros informais até sessões
+    práticas intensivas, há algo para todos. Conecte-se, aprenda e descubra em
+    nossa vibrante comunidade.
+  </h2>
+  <div class="flex flex-row w-full max-w-7xl justify-around">
+    {
+      acvities.map(({ Icon, title, description }) => (
+        <ActivityCard Icon={Icon} title={title} description={description} />
+      ))
+    }
+  </div>
+</div>

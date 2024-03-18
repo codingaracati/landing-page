@@ -5,9 +5,9 @@ import Logo from "../assets/Logo";
 ---
 
 <div class="flex flex-row px-36 py-24 items-center justify-center bg-gray-100">
-  <div class="flex flex-col">
+  <div class="flex flex-col flex-1 w-max">
     <h1 class="text-primary text-6xl font-semibold mb-4">Coding Aracati</h1>
-    <span class="text-secondary mb-8 text-base font-normal">
+    <span class="text-secondary mb-8 text-base font-normal max-w-3xl">
       A comunidade de Coding Aracati é um grupo unido de entusiastas da
       tecnologia empenhados em aprender, colaborar e inovar. Formado por
       programadores de todas as áreas, o grupo realiza workshops e eventos
@@ -20,7 +20,5 @@ import Logo from "../assets/Logo";
       <Button onClick={() => {}}> Entrar na comunidade </Button>
     </div>
   </div>
-  <div class="flex-1">
-    <Logo size={400} />
-  </div>
+  <Logo size={400} />
 </div>
