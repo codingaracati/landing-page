@@ -1,7 +1,15 @@
 ---
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../sections/Header.astro";
+import About from "../sections/About.astro";
+import Activities from "../sections/Activities.astro";
 ---
 
-<main>
-  <Header />
-</main>
+<Layout title="Coding Aracati">
+  <main>
+    <Header />
+    <About />
+    <Activities />
+  </main>
+</Layout>

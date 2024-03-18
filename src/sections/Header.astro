@@ -1,6 +1,6 @@
 ---
 import Logo from "../assets/Logo";
-import Button from "./Button";
+import Button from "../components/Button";
 ---
 
 <header
@@ -10,5 +10,5 @@ import Button from "./Button";
     <Logo size={48} />
     <h1 class="text-primary font-medium text-lg ml-1">Coding Aracati</h1>
   </div>
-  <Button client:load url="https://google.com">Entrar na comunidade</Button>
+  <Button client:load onClick={() => {}}>Entrar na comunidade</Button>
 </header>

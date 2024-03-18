@@ -1,14 +1,15 @@
-type ButtonProps = {
+import type { HTMLProps } from "react";
+
+type ButtonProps = HTMLProps<HTMLButtonElement> & {
   children: React.ReactNode;
-  url: string;
 };
 
-const Button = ({ children, url }: ButtonProps) => {
+const Button = ({ children, ...props }: ButtonProps) => {
   return (
     <button
-      className="px-5 py-2 bg-primary text-white rounded-md font-medium"
+      {...props}
+      className="px-8 py-4 bg-primary text-white rounded-md font-normal text-sm"
       type="button"
-      onClick={() => window.open(url)}
     >
       {children}
     </button>
