@@ -1,0 +1,14 @@
+---
+import Logo from "../assets/Logo";
+import Button from "./Button";
+---
+
+<header
+  class="py-6 px-12 bg-gray-100 flex flex-row justify-between items-center"
+>
+  <div class="flex flex-row items-center">
+    <Logo size={48} />
+    <h1 class="text-primary font-medium text-lg ml-1">Coding Aracati</h1>
+  </div>
+  <Button client:load url="https://google.com">Entrar na comunidade</Button>
+</header>
