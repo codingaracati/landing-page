@@ -10,7 +10,9 @@ const Button = ({ children, ...props }: ButtonProps) => {
       {...props}
       className="px-8 py-4 bg-primary text-white rounded-md font-normal text-sm"
       type="button"
-      onClick={() => window.open("https://www.google.com", "_blank")}
+      onClick={() =>
+        window.open("https://chat.whatsapp.com/I15cW5OaDrqGn7YTM3maH8")
+      }
     >
       {children}
     </button>
