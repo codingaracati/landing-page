@@ -3,7 +3,7 @@ import { FaCalendar, FaWrench, FaLaptop } from "react-icons/fa6";
 
 import ActivityCard from "../components/ActivityCard";
 
-const acvities = [
+const activities = [
   {
     Icon: FaCalendar,
     title: "MeetUp",
@@ -25,19 +25,23 @@ const acvities = [
 ];
 ---
 
-<div class="py-10 px-36 flex flex-col items-center">
-  <h1 class="text-primary font-semibold text-4xl text-center mb-2">
+<div class="py-10 px-36 md:px-12 max-sm:px-12 flex flex-col items-center">
+  <h1
+    class="text-primary font-semibold text-4xl max-sm:text-3xl text-center mb-2"
+  >
     Eventos e Atividades
   </h1>
-  <h2 class="text-secondary text-base font-normal mb-7 max-w-3xl text-center">
+  <h2
+    class="text-secondary text-base max-sm:text-sm font-normal mb-7 max-w-3xl text-center"
+  >
     Explore uma variedade de eventos e atividades emocionantes para todos os
     interesses e níveis de habilidade. Desde encontros informais até sessões
     práticas intensivas, há algo para todos. Conecte-se, aprenda e descubra em
     nossa vibrante comunidade.
   </h2>
-  <div class="flex flex-row w-full max-w-6xl justify-between">
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-6xl">
     {
-      acvities.map(({ Icon, title, description }) => (
+      activities.map(({ Icon, title, description }) => (
         <ActivityCard Icon={Icon} title={title} description={description} />
       ))
     }

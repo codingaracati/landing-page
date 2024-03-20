@@ -1,32 +1,33 @@
 ---
 const events = [
   {
-    title: "Visita - FrontEnd CE",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    image: "https://picsum.photos/300/300",
-  },
-  {
     title: "1º Meetup Coding Aracati",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    image: "https://picsum.photos/300/300",
+  },
+  {
+    title: "Visita - Front-end CE",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
   },
 ];
 ---
 
-<div class="py-10 px-36 flex flex-col items-center">
+<div class="py-10 px-36 md:px-12 max-sm:px-12 flex flex-col items-center">
   <h1 class="text-primary font-semibold text-4xl text-center mb-4">
     Eventos recentes
   </h1>
-  <div class="grid grid-cols-2 gap-6">
+  <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-6">
     {
-      events.map(({ title, description, image }) => (
-        <div class="w-full flex flex-col items-center mb-4 overflow-hidden rounded-lg max-w-sm">
-          <img src={image} alt={title} class="w-full h-96 object-cover" />
-          <div class="bg-gray-100 w-full text-center p-4">
+      events.reverse().map(({ title, description }, index) => (
+        <div class="flex flex-col items-center mb-4 overflow-hidden rounded-lg max-w-sm">
+          <img
+            src={`/landing-page/image-${events.length - index}.webp`}
+            alt={title}
+            class="w-full h-96 object-cover"
+          />
+          <div class="bg-gray-100 flex-1 w-full text-center p-4">
             <h1 class="text-primary font-semibold text-2xl mt-2 ">{title}</h1>
-            <span class="text-secondary">{description}</span>
           </div>
         </div>
       ))

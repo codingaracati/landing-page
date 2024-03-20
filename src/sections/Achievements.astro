@@ -25,27 +25,33 @@ const achievements = [
 ];
 ---
 
-<div class="bg-gray-100 flex flex-row justify-center px-36 py-16">
-  <div class="flex flex-row justify-between w-full max-w-6xl">
-    <div class="max-w-xl">
-      <h1 class="text-secondary text-4xl font-bold">Nosso Impacto:</h1>
-      <h1 class="text-primary text-4xl font-bold mb-2">
+<div
+  class="bg-gray-100 flex flex-row justify-center px-36 md:px-12 max-sm:px-12 py-16"
+>
+  <div
+    class="flex flex-row xl:flex-row lg:flex-col md:flex-col max-sm:flex-col justify-between w-full max-w-6xl lg:max-w-6xl md:max-w-4xl"
+  >
+    <div class="max-w-xl md:mb-5">
+      <h1 class="text-secondary text-4xl max-sm:text-3xl font-bold">
+        Nosso Impacto:
+      </h1>
+      <h1 class="text-primary text-4xl max-sm:text-3xl font-bold mb-2">
         Conectando comunidades, inspiração e aprendizado
       </h1>
-      <h2 class="text-secondary font-normal text-base">
+      <h2 class="text-secondary font-normal text-base max-sm:text-sm">
         Celebre conosco o nosso impacto! Com orgulho, compartilhamos nossas
         conquistas: mais do que números, são histórias de conexão, aprendizado e
         crescimento.
       </h2>
     </div>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 xl:grid-cols-2 lg:grid-cols-4 gap-4">
       {
         achievements.map(({ Icon, title, value }) => (
           <div class="flex flex-row items-center">
             <Icon className="text-primary mr-4" size={48} />
             <div>
               <h1 class="text-primary text-3xl font-bold">{value}</h1>
-              <span class="text-secondary">{title}</span>
+              <span class="text-secondary w-5">{title}</span>
             </div>
           </div>
         ))
