@@ -2,13 +2,12 @@
 const events = [
   {
     title: "1º Meetup Coding Aracati",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
   },
   {
     title: "Visita - Front-end CE",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+  },
+  {
+    title: "1º Workshop Coding Aracati",
   },
 ];
 ---
@@ -17,9 +16,11 @@ const events = [
   <h1 class="text-primary font-semibold text-4xl text-center mb-4">
     Eventos recentes
   </h1>
-  <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-6">
+  <div
+    class="grid grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 max-sm:grid-cols-1 gap-6"
+  >
     {
-      events.reverse().map(({ title, description }, index) => (
+      events.reverse().map(({ title }, index) => (
         <div class="flex flex-col items-center mb-4 overflow-hidden rounded-lg max-w-sm">
           <img
             src={`/landing-page/image-${events.length - index}.webp`}
